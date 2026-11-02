@@ -1,0 +1,34 @@
+#### general settings and paths settings
+results_dir: ./checkpoints
+
+### model settings
+model_type: virchow
+num_classes: 2
+
+### train settings
+gpu_ids: 0
+num_workers: 4
+batch_size: 512
+use_fp16: 0
+
+max_epochs: 100
+lr: 0.0002
+
+bar: 0
+in_memory: 1
+gc: 2
+early_stopping: True
+
+opt: adamw #['adam', 'sgd', 'adamw']
+reg: 1e-02 # L2-regularization weight decay
+lambda_reg: 0.0001 #L1-Regularization Strength
+
+### other settings
+seed: 42
+
+csv_path: /mnt/SSD_4T/admin103/ydw/Slide_mil_classify/cut_patch/TCGA/process_list_autogen.csv
+data_h5_dir: /mnt/SSD_4T/admin103/ydw/Slide_mil_classify/cut_patch/TCGA
+data_slide_dir: /mnt/SSD_4T/admin103/ydw/TCGA_svs
+feat_dir: /mnt/SSD_4T/admin103/ydw/Slide_mil_classify/output/feat_2000
+slide_ext: .svs
+no_auto_skip: True
